@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    height: 100vh;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar content";
+}
+
+.navbar {
+    border: 1px solid gray;
+    grid-area: navbar;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.navbar > h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(74, 74, 74);
+}
+
+.navbar button {
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 6px 10px;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: rgb(47, 47, 47);
+    color: white;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: rgb(74, 74, 74);
+    font-weight: 500;
+    background-color: white;
+}
+
+.sidebar-components {
+    border-top: 1px solid rgb(204, 202, 202);
+    border-right: 1px solid rgb(204, 202, 202);
+    flex-grow: 1;
+    padding: 0px 15px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 249, 249);
+}
+
+.content {
+    grid-area: content;
+    background-color: rgb(243, 243, 243);
+}
+
+.sidebar-item {
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(74, 74, 74);
+    border: 0.5px solid rgb(204, 202, 202);
+    margin: 14px 0px;
+    display: flex;
+    justify-content: space-between;
+    transition: height 0.3s ease;
+}
+
+.sidebar-plus-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.active {
+    transform: rotate(45deg);
+}
+
+.expanded {
+    height: 200px;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form {
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid rgb(204, 202, 202);
+    background-color: white;
+    min-height: 40rem;
+    min-width: 40rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#form h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(74, 74, 74);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#form div > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form div > div > label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(74, 74, 74);
+}
+
+#form div > div > input:focus {
+    outline: 1px solid rgb(204, 202, 202);
+    color: rgb(74, 74, 74);
+}
+
+#form div > div > img {
+    cursor: pointer;
+}
+
+#form div input {
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid rgb(204, 202, 202);
+    margin: 10px 0px;
+}
+
+#form div input:focus {
+    outline: 1px solid rgb(64, 64, 64);
+}
+
+#form div select {
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid rgb(204, 202, 202);
+    margin: 10px 0px;
+}
+
+#form div textarea {
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid rgb(204, 202, 202);
+    margin: 10px 0px;
+    min-height: 150px;
+}
+
+#form div textarea:focus {
+    outline: 1px solid rgb(64, 64, 64);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#form button {
+    border: 0.5px solid rgb(204, 202, 202);
+    background-color: rgb(251, 249, 249);
+    color: rgb(74, 74, 74);
+    padding: 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0px 4px;
+    font-weight: 500;
+    border-radius: 4px;
+} 
+
+#form button:hover {
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
